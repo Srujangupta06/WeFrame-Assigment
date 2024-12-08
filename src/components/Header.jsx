@@ -47,7 +47,7 @@ const Header = () => {
           </li>
         </ul>
         <div className="flex items-center gap-4">
-          <button className="outline-none border-none bg-[#0093D0] px-4 py-2 rounded-[6px] flex gap-2 text-sm text-white items-center">
+          <button className="outline-none border-none bg-[#0093D0] hover:bg-[#40768e] hover:transition-all duration-300 px-4 py-2 rounded-[6px] flex gap-2 text-sm text-white items-center">
             <img
               src="https://res.cloudinary.com/djv3sgbxn/image/upload/v1733649491/nav-cart_gao3da.png"
               alt="cart-button"
@@ -65,18 +65,18 @@ const Header = () => {
       </div>
       <nav className="px-8 mt-2">
         <ul className="flex items-center gap-8 text-[16px] font-normal text-[#6B7280] leading-3">
-          <li>Art de la table</li>
-          <li>Mobilier</li>
-          <li>Nappage</li>
-          <li>Matériel de salle</li>
-          <li>Cuisine</li>
-          <li>Barbecue</li>
-          <li>Tente</li>
-          <li>Chauffage</li>
-          <li>Podium - Piste de danse</li>
-          <li>Son et lumière</li>
-          <li>Packs</li>
-          <li>Consommables</li>
+          <li className="border-b-2 border-[#0093D0] pb-2 text-[#0093D0] font-semibold">Art de la table</li>
+          <li className=" pb-2">Mobilier</li>
+          <li className=" pb-2">Nappage</li>
+          <li className=" pb-2">Matériel de salle</li>
+          <li className=" pb-2">Cuisine</li>
+          <li className=" pb-2">Barbecue</li>
+          <li className=" pb-2">Tente</li>
+          <li className=" pb-2">Chauffage</li>
+          <li className=" pb-2">Podium - Piste de danse</li>
+          <li className=" pb-2">Son et lumière</li>
+          <li className=" pb-2">Packs</li>
+          <li className=" pb-2">Consommables</li>
         </ul>
       </nav>
     </header>
