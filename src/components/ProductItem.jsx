@@ -11,7 +11,7 @@ const ProductItem = () => {
         <div className="mt-5 rounded-md flex gap-6">
           {/*Product Card */}
           {/*Product Image */}
-          <div className="flex items-start gap-2 w-5/12 bg-[#F8F6F4] px-2 py-4">
+          <div className="flex items-start gap-2 w-6/12 bg-[#F8F6F4] px-2 py-4">
             {/*Images */}
             <ul>
               {ProductImages.map((eachImage) => (
@@ -30,17 +30,17 @@ const ProductItem = () => {
             {/*Main Image */}
             <div>
               <img
-                src="https://res.cloudinary.com/djv3sgbxn/image/upload/v1733654322/main-product-image_syk8xf.png"
+                src="https://res.cloudinary.com/djv3sgbxn/image/upload/v1733679275/main-product-image_lwk5fs.png"
                 alt="main-product-image"
                 className="w-[100%]"
               />
             </div>
           </div>
           {/*Product Info */}
-          <div className="w-7/12 flex flex-col justify-between">
+          <div className="w-6/12 flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between mb-3">
-                <h1 className="font-semibold text-3xl">
+                <h1 className="font-semibold text-2xl">
                   Cheese – appareil à raclette 1/2 roue
                 </h1>
                 <img
@@ -48,9 +48,9 @@ const ProductItem = () => {
                   alt="favorite-icon"
                 />
               </div>
-              <p className="text-[#111928] text-2xl mb-3">
+              <p className="text-[#111928] text-xl mb-3">
                 39,50€{" "}
-                <span className="text-lg text-[#9C9C9C] ml-2">/pièce</span>
+                <span className="text-sm text-[#9C9C9C] ml-2">/pièce</span>
               </p>
               <hr className="text-[#9C9C9C] border-1 mb-5" />
               <div className="flex items-center justify-between mb-5">
@@ -80,10 +80,10 @@ const ProductItem = () => {
                     </span>
                   </div>
                 </div>
-                <p className="text-[#9C9C9C] text-sm">RÉF : VABGN5</p>
+                <p className="text-[#9C9C9C] text-[16px]">RÉF : VABGN5</p>
               </div>
               <hr className="text-[#9C9C9C] border-1 mb-5" />
-              <div className="flex flex-col gap-6 text-sm text-[#5D5D5D] mb-4">
+              <div className="flex flex-col gap-6 text-[18px] text-[#5D5D5D] mb-4">
                 <ul className="list-none">
                   <li className="mb-1">
                     Location appareil à raclette - Raclette traditionnelle 1/2
