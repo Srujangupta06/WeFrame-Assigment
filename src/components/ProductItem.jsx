@@ -62,7 +62,7 @@ const ProductItem = ({ productInfo }) => {
           <div className="w-full lg:w-6/12 flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between mb-3">
-                <h1 className="font-semibold text-2xl">{name}</h1>
+                <h1 className="font-semibold text-lg md:text-2xl">{name}</h1>
                 <img
                   src={
                     !favorite
@@ -85,7 +85,7 @@ const ProductItem = ({ productInfo }) => {
                   }}
                 />
               </div>
-              <p className="text-[#111928] text-xl mb-3">
+              <p className="text-[#111928] text-md md:text-xl mb-3">
                 {price}
                 {currency}
                 <span className="text-sm text-[#9C9C9C] ml-2">/pièce</span>
@@ -120,13 +120,13 @@ const ProductItem = ({ productInfo }) => {
                     </span>
                   </div>
                 </div>
-                <p className="text-[#9C9C9C] text-[16px]">RÉF : VABGN5</p>
+                <p className="text-[#9C9C9C] text-[14px] md:text-[16px]">RÉF : VABGN5</p>
               </div>
               <hr className="text-[#9C9C9C] border-1 mb-5" />
               <div className="flex flex-col gap-6 text-[18px] text-[#5D5D5D] mb-4">
                 <ul className="list-none">
                   {specifications.map((eachSpecification, index) => (
-                    <li key={index}>{eachSpecification}</li>
+                    <li key={index} className="text-sm mb-1">{eachSpecification}</li>
                   ))}
                 </ul>
                 <p>
@@ -137,7 +137,7 @@ const ProductItem = ({ productInfo }) => {
               <hr className="text-[#9C9C9C] border-1 mb-5" />
             </div>
             <div className="flex items-center gap-4 flex-wrap">
-              <div className="flex gap-4 border border-[#9c9c9c] px-3 py-1 rounded-md w-3/12 md:2/12 justify-between items-center">
+              <div className="flex gap-4 border border-[#9c9c9c] px-3 py-1 rounded-md w-6/12 md:w-3/12 md:2/12 justify-between items-center">
                 <button
                   className="outline-none border-none text-xl md:text-2xl"
                   onClick={() => setQuantity(quantity <= 1 ? 1 : quantity - 1)}

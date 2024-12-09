@@ -5,7 +5,7 @@ import { productList } from "@/constants";
 import SectionTitle from "./SectionTitle";
 import { useState } from "react";
 const SimilarProducts = () => {
-  const [carouselList, setCarouselList] = useState(productList.slice(0, 4));
+  const [carouselList, setCarouselList] = useState(productList);
   const onHandleNextItem = () => {
     console.log(
       carouselList
