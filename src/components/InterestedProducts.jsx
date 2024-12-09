@@ -1,20 +1,20 @@
+'use client'
+import { productList } from "@/constants";
 import Product from "./Product";
+import SectionTitle from "./SectionTitle";
 const InterestedProducts = () => {
+  
   return (
     <section className="bg-[#FBF9F899] py-4 mb-5">
-      <div className="flex justify-between items-center px-8 ">
-        <h2 className="text-[#393939] text-2xl">
-          Ces produits pourraient vous intéresser
-        </h2>
-        <h5 className="underline text-[14px] text-[#393939] cursor-pointer">
-          VOIR TOUTE LA COLLECTION
-        </h5>
-      </div>
-      <ul className="flex flex-wrap px-8 gap-x-2">
+      <SectionTitle
+        mainHeading="Ces produits pourraient vous intéresser"
+        link="VOIR TOUTE LA COLLECTION"
+      />
+      <ul className="lg:px-8 px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {/*Product Card*/}
-        <Product />
-        <Product />
-        <Product />
+        {productList.map((eachProduct) => (
+          <Product productInfo={eachProduct} key={eachProduct.id} />
+        ))}
       </ul>
     </section>
   );

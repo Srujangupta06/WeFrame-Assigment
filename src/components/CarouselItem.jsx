@@ -1,11 +1,4 @@
-"use client";
-
-import { wishlistedProductsDispatchContext } from "@/context/wishListContext";
-import { useContext, useState } from "react";
-
-const Product = ({ productInfo }) => {
-  const dispatch = useContext(wishlistedProductsDispatchContext);
-  const [favorite, setFavorite] = useState(false);
+const CarouselItem = ({ productInfo }) => {
   const {
     name,
     price,
@@ -20,30 +13,16 @@ const Product = ({ productInfo }) => {
   } = productInfo;
 
   return (
-    <li className={`my-6 flex-shrink-0 cursor-pointer shadow-xl rounded-md`}>
+    <li
+      className={`my-6 flex-shrink-0 cursor-pointer shadow-xl rounded-md md:w-3/12 w-full`}
+    >
       {/*Image Container */}
       <div className="bg-[#F9F7F5] py-2 px-4 rounded-md">
         <div className="flex items-center justify-between">
           <img
-            src={
-              !favorite
-                ? "https://res.cloudinary.com/djv3sgbxn/image/upload/v1733649491/nav-heart_tgm9c6.png"
-                : "https://cdn.icon-icons.com/icons2/3553/PNG/512/wishlist_favorites_favorite_heart_like_ecommerce_icon_224938.png"
-            }
+            src="https://res.cloudinary.com/djv3sgbxn/image/upload/v1733649491/nav-heart_tgm9c6.png"
             alt="wishlist-icon"
             className="w-[18px] cursor-pointer"
-            onClick={() => {
-              setFavorite(!favorite);
-              !favorite
-                ? dispatch({
-                    type: "ADD_TO_WISHLIST",
-                    payload: productInfo,
-                  })
-                : dispatch({
-                    type: "REMOVE_FROM_WISHLIST",
-                    payload: productInfo,
-                  });
-            }}
           />
           <div className="bg-[#FFFFFF] px-2 py-1 rounded-md">
             <p className="font-medium text-[#111928] text-[10px]">{category}</p>
@@ -68,7 +47,6 @@ const Product = ({ productInfo }) => {
         <div className="flex items-center justify-between">
           <div className="flex  gap-1  items-center">
             <p className="text-[#9C9C9C] text-sm">
-              {" "}
               {pricePerPiece}
               {currency}/Pièce
             </p>
@@ -90,4 +68,4 @@ const Product = ({ productInfo }) => {
     </li>
   );
 };
-export default Product;
+export default CarouselItem;

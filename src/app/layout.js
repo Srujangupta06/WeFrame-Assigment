@@ -2,6 +2,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { ToastContainer } from "react-toastify";
+import WishlistContextProvider from "@/context/wishListContext";
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -21,12 +23,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <Header />
-        {children}
-        <Footer />
+      <body className={` antialiased`}>
+        <WishlistContextProvider>
+          <Header />
+          {children}
+          <Footer />
+        </WishlistContextProvider>
       </body>
     </html>
   );
