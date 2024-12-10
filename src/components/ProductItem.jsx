@@ -2,7 +2,7 @@
 import { wishlistedProductsDispatchContext } from "@/context/wishListContext";
 import { useContext, useState } from "react";
 import { toast } from "react-toastify";
-const ProductItem = ({ productInfo }) => {
+const ProductItem = ({ productInfo, category }) => {
   const dispatch = useContext(wishlistedProductsDispatchContext);
   const [product, setProduct] = useState(productInfo);
   const [quantity, setQuantity] = useState(1);
@@ -15,16 +15,18 @@ const ProductItem = ({ productInfo }) => {
     productImages,
     currency,
     specifications,
-    category,
   } = product;
+  console.log(category);
   const { width, diameter, units } = dimensions;
   const [image, setImage] = useState(productImages[0]);
 
   return (
     <div className="mb-8 px-6 lg:px-8 ">
-      <div className="flex gap-4 items-center">
+      <div className="flex gap-4 items-center pt-3">
         <h3 className="text-[#393939] font-medium text-sm">Home</h3>
-        <li className="list-disc text-sm text-[#9C9C9C]">{category}</li>
+        <li className="list-disc text-sm text-[#9C9C9C]">
+          {category}
+        </li>
       </div>
       <div className="flex flex-col gap-10">
         <div className="mt-5 rounded-md flex flex-col lg:flex-row gap-6">
@@ -120,13 +122,17 @@ const ProductItem = ({ productInfo }) => {
                     </span>
                   </div>
                 </div>
-                <p className="text-[#9C9C9C] text-[14px] md:text-[16px]">RÉF : VABGN5</p>
+                <p className="text-[#9C9C9C] text-[14px] md:text-[16px]">
+                  RÉF : VABGN5
+                </p>
               </div>
               <hr className="text-[#9C9C9C] border-1 mb-5" />
               <div className="flex flex-col gap-6 text-[18px] text-[#5D5D5D] mb-4">
                 <ul className="list-none">
                   {specifications.map((eachSpecification, index) => (
-                    <li key={index} className="text-sm mb-1">{eachSpecification}</li>
+                    <li key={index} className="text-sm mb-1">
+                      {eachSpecification}
+                    </li>
                   ))}
                 </ul>
                 <p>

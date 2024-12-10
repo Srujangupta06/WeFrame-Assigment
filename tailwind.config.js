@@ -7,9 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+        monsterrat: ["Montserrat", "sans-serif"],
+        geist: ["Geist", "sans-serif"],
       },
     },
   },

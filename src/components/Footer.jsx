@@ -1,13 +1,16 @@
 import { socialMediaIcons } from "@/constants";
+import Link from "next/link";
 const Footer = () => {
   return (
     <footer className="xs:flex-col lg:flex lg:justify-between lg:items-start px-8 pt-6 pb-12">
       <div className="xs:flex-col lg:flex lg:items-start lg:justify-between lg:w-8/12">
-        <img
-          src="https://res.cloudinary.com/djv3sgbxn/image/upload/v1733649148/nav-logo_mzbjy5.png"
-          alt="footer-logo"
-          className="w-[135px] h-[70px] cursor-pointer mb-8"
-        />
+        <Link href="/">
+          <img
+            src="https://res.cloudinary.com/djv3sgbxn/image/upload/v1733649148/nav-logo_mzbjy5.png"
+            alt="footer-logo"
+            className="w-[135px] h-[70px] cursor-pointer mb-8"
+          />
+        </Link>
         <ul className="mb-6">
           <h4 className="font-semibold text-sm mb-2">INFOS PRATIQUES</h4>
           <li className="text-[16px] text-[#393939] mb-2 cursor-pointer">

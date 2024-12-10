@@ -3,7 +3,6 @@ import { productList } from "@/constants";
 import Product from "./Product";
 import SectionTitle from "./SectionTitle";
 const InterestedProducts = () => {
-  
   return (
     <section className="bg-[#FBF9F899] py-4 mb-5">
       <SectionTitle
