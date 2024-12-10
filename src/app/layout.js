@@ -2,6 +2,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SubscriberBox from "@/components/SubscriberBox";
+import ServicesOverview from "@/components/ServicesOverview";
 import { ToastContainer } from "react-toastify";
 import WishlistContextProvider from "@/context/wishListContext";
 const geistSans = localFont({
@@ -27,6 +29,8 @@ export default function RootLayout({ children }) {
         <WishlistContextProvider>
           <Header />
           {children}
+          <ServicesOverview />
+          <SubscriberBox />
           <Footer />
         </WishlistContextProvider>
       </body>
